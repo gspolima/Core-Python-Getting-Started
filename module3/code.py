@@ -1,4 +1,6 @@
+from cgi import test
 from multiprocessing.dummy import Array
+from operator import indexOf
 
 
 def staircasePattern(steps: int):    
@@ -67,4 +69,19 @@ def fibonacciSequence(limit: int):
         second = next
         counter += 1
 
-fibonacciSequence(10)
+# fibonacciSequence(10)
+
+
+def countSubstringOccurrences(term: str, text: str):
+    occurrences = 0
+    while (True):
+        atIndex = text.find(term)
+        if (atIndex != -1):
+            text = text.replace("Emma", "", 1)
+            occurrences += 1
+        else:
+            break
+
+    print("The term", term, "occurs", occurrences, "times")
+
+countSubstringOccurrences("Emma", "Emma plays Hide-and-seek. Emma is a writer. Emma eats avocados.")
