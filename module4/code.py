@@ -3,42 +3,42 @@ from operator import index
 from turtle import st
 from urllib.request import urlopen
 
-def combineFirstMiddleAndLastLetters(word: str):
-    letterCount = word.__len__()
-    middleIndex = math.floor(letterCount / 2)
-    middleLetter = word[middleIndex]
+def combine_first_middle_and_last_letters(word: str):
+    letter_count = word.__len__()
+    middle_index = math.floor(letter_count / 2)
+    middle_letter = word[middle_index]
 
-    print(word[0], middleLetter, word[letterCount - 1])
+    print(word[0], middle_letter, word[letter_count - 1])
 
-# combineFirstMiddleAndLastLetters("Crafstman")
+# combine_first_middle_and_last_letters("Crafstman")
 
 
-def placeUppercaseLast(word: str):
-    uppercaseLetters = []
+def place_uppercase_last(word: str):
+    uppercase_letters = []
     for letter in word:
         if (letter.isupper()):
-            uppercaseLetters.append(letter)
+            uppercase_letters.append(letter)
 
-    for letter in uppercaseLetters:
+    for letter in uppercase_letters:
         word = word.replace(letter, "", 1)
         word = word + letter
 
     print(word)
 
-# placeUppercaseLast("PyNaTive")
+# place_uppercase_last("PyNaTive")
 
 
-def createMixedString(firstWord: str, secondWord: str):
-    indexStart = 0
-    secondWordLength = secondWord.__len__()
-    indexEnd = secondWordLength
-    newString = ""
+def create_mixed_string(first_word: str, second_word: str):
+    index_start = 0
+    second_word_length = second_word.__len__()
+    index_end = second_word_length
+    new_string = ""
 
-    while (indexStart < secondWordLength and indexEnd >= 0):
-        newString = newString + firstWord[indexStart] + secondWord[indexEnd - 1]
-        indexStart += 1
-        indexEnd -= 1
+    while (index_start < second_word_length and index_end >= 0):
+        new_string = new_string + first_word[index_start] + second_word[index_end - 1]
+        index_start += 1
+        index_end -= 1
 
-    print(newString)
+    print(new_string)
 
-createMixedString("Cake", "Rice")
+create_mixed_string("Cake", "Rice")

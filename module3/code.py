@@ -3,7 +3,7 @@ from multiprocessing.dummy import Array
 from operator import indexOf
 
 
-def staircasePattern(steps: int):    
+def staircase_pattern(steps: int):    
     for i in range(steps + 1):
         j: int = 1
         while (j <= i):
@@ -12,37 +12,37 @@ def staircasePattern(steps: int):
 
         print("")
 
-# staircasePattern(5)
+# staircase_pattern(5)
 
 
-def sumOfAllNumbers(limit: int):
+def sum_of_all_numbers(limit: int):
     total: int = 0
     while (limit > 0):
         total += limit
         limit -= 1
     print(total)
 
-# sumOfAllNumbers(10)
+# sum_of_all_numbers(10)
 
 
-def multiplicationTableOf(number: int):
+def multiplication_table_of(number: int):
     multiplier: int = 1;
     while(multiplier <= 10):
         print(number * multiplier)
         multiplier += 1
 
-# multiplicationTableOf(4)
+# multiplication_table_of(4)
 
 
-def countDigits(number: int):
-    numberString = str(number)
-    digits = len(numberString)
+def count_digits(number: int):
+    number_as_string = str(number)
+    digits = len(number_as_string)
     print(digits)
 
-# countDigits(315000000)
+# count_digits(315000000)
 
 
-def filteredNumbers(array):
+def filtered_numbers(array):
     for i in array:
         if (i % 5 != 0):
             continue
@@ -54,29 +54,29 @@ def filteredNumbers(array):
             else:
                 print(i)
 
-# filteredNumbers([12, 75, 150, 180, 145, 525, 50])
+# filtered_numbers([12, 75, 150, 180, 145, 525, 50])
 
 
-def fibonacciSequence(limit: int):
+def fibonacci_sequence(elements_limit: int):
     first = 0
     second = 1
     counter = 2
     print(first, second, end=" ")
-    while (counter < limit):
+    while (counter < elements_limit):
         next = first + second
         print(next, end=" ")
         first = second
         second = next
         counter += 1
 
-# fibonacciSequence(10)
+# fibonacci_sequence(10)
 
 
-def countSubstringOccurrences(term: str, text: str):
+def count_substring_occurrences(term: str, text: str):
     occurrences = 0
     while (True):
-        atIndex = text.find(term)
-        if (atIndex != -1):
+        at_index = text.find(term)
+        if (at_index != -1):
             text = text.replace("Emma", "", 1)
             occurrences += 1
         else:
@@ -84,4 +84,4 @@ def countSubstringOccurrences(term: str, text: str):
 
     print("The term", term, "occurs", occurrences, "times")
 
-countSubstringOccurrences("Emma", "Emma plays Hide-and-seek. Emma is a writer. Emma eats avocados.")
+count_substring_occurrences("Emma", "Emma plays Hide-and-seek. Emma is a writer. Emma eats avocados.")
